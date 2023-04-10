@@ -1,23 +1,35 @@
 <template>
   <div class="backdrop">
     <div class="modal">
-      <p>modal content</p>
+      <h1>Modal Title</h1>
+      <p>Modal Content</p>
     </div>
   </div>
 </template>
 
 <style>
 .modal {
-  widows: 400px;
+  width: 400px;
   padding: 20px;
+  margin: 100px auto;
   border-radius: 10px;
   background: #fff;
 }
 .backdrop {
   top: 0;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
+  left: 0;
   width: 100%;
   height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal h1 {
+  color: #03cfb4;
+  border-bottom: none;
+  padding: 0;
+}
+
+.modal p {
+  font-style: normal;
 }
 </style>

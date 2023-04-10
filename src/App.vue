@@ -38,6 +38,8 @@ export default {
   margin-top: 60px;
 }
 h1 {
-  color: red;
+  border-bottom: 1px solid #ddd;
+  display: inline;
+  padding-bottom: 10px;
 }
 </style>
