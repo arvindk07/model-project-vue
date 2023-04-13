@@ -64,4 +64,9 @@ export default {
   text-decoration: none;
   margin: 10px;
 }
+
+.modal button {
+  margin-top: 20px;
+  padding: 20px;
+}
 </style>

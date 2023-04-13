@@ -14,7 +14,16 @@
       <p>Grab your ninja swag for half price</p></Modal
     >
   </div>
+
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>Sign Up to Newsletter</h1>
+      <p>For Update and promo codes!</p></Modal
+    >
+  </div>
+
   <button @click.alt="toggleModal">Open Modal (alt)</button>
+  <button @click="toggleModalTwo">Open Modal</button>
 </template>
 
 <script>
@@ -28,9 +37,8 @@ export default {
   data() {
     return {
       title: "My First App",
-      header: "Sign up for the Giveaway!",
-      text: "Grab your ninja swag for half price !",
       showModal: false,
+      showModalTwo: false,
     };
   },
   methods: {
@@ -41,6 +49,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal;
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo;
     },
   },
 };
