@@ -4,7 +4,7 @@
   <!-- <button @click="handleClick">Click Me</button> -->
   <br />
   <p>Welcome...</p>
-  <div v-if="showModal">
+  <Teleport to=".modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
       <template v-slot:links>
         <a href="#">Sign Up</a>
@@ -13,14 +13,14 @@
       <h1>Ninja Giveaway</h1>
       <p>Grab your ninja swag for half price</p></Modal
     >
-  </div>
+  </Teleport>
 
-  <div v-if="showModalTwo">
+  <Teleport to=".modals" v-if="showModalTwo">
     <Modal @close="toggleModalTwo">
       <h1>Sign Up to Newsletter</h1>
       <p>For Update and promo codes!</p></Modal
     >
-  </div>
+  </Teleport>
 
   <button @click.alt="toggleModal">Open Modal (alt)</button>
   <button @click="toggleModalTwo">Open Modal</button>
